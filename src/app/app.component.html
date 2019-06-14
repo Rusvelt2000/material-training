@@ -1,0 +1,21 @@
+<mat-drawer-container class="drawer-container" autosize>
+  <mat-drawer #drawer class="sidenav">
+      <button mat-button color="primary" routerLink="/customers">Customers</button>
+      <button mat-button color="primary" routerLink="/orders">Orders</button>
+      <button mat-button color="primary" routerLink="/messages">Messages</button>
+  </mat-drawer>
+  <div>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Title</span>
+        <span class="spacer"></span>
+        <mat-icon>favorite</mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+  <router-outlet></router-outlet>
+</mat-drawer-container>
